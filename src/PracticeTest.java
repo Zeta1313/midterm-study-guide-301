@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -21,6 +24,34 @@ public class PracticeTest {
 
     // TODO: Make tests for each problem you solve
     
+    @Test
+    void testSearch() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "apple");
+        map.put(2, "banana");
+        map.put(3, "cherry");
+        map.put(4, "strawberry");
+        map.put(5, "cheeseburger");
+
+        String check = Practice.longestWord('c', map);
+
+        assertEquals("cheeseburger", check);
+
+    }
+        @Test
+        void testNumSearch() {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put( "apple", 1);
+        map.put( "banana", 2);
+        map.put("cherry", 2);
+        map.put("strawberry", 2);
+        map.put("cheeseburger", 3);
+
+        int check = Practice.exactLength(1, 7, map);
+
+        assertEquals(3, check);
+
+    }
 }
 
 

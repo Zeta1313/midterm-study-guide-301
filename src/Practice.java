@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -26,4 +28,24 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
+
+    public static String longestWord(char search, HashMap<Integer, String> searched) {
+        String result = "";
+        for (String current : searched.values()) {
+            if (current.charAt(0) == search && current.length() > result.length()) {
+                result = current;
+            }
+        }
+        return result;
+    }
+
+    public static int exactLength(int x, int y, HashMap<String, Integer> searched) {
+        int z = 0;
+        for (String current : searched.keySet()) {
+            if (current.length() > x && current.length() < y) {
+                z++;
+            }
+        }
+        return z;
+    }
 }
