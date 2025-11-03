@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Practice {
     /**
@@ -47,5 +48,19 @@ public class Practice {
             }
         }
         return z;
+    }
+
+    public static int EOdifference (HashSet<Integer> checking) {
+        int odd = 0;
+        int even = 0;
+        for (int i : checking) {
+            if(i%2 == 0) {
+                even++;
+            }
+            else {
+                odd++;
+            }
+        }
+        return (odd-even);
     }
 }

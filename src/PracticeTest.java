@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
@@ -50,8 +51,17 @@ public class PracticeTest {
         int check = Practice.exactLength(1, 7, map);
 
         assertEquals(3, check);
-
     }
+
+        @Test
+        void testEO() {
+            HashSet<Integer> set = new HashSet<Integer>();
+            set.add(1);
+            set.add(10);
+            set.add(356);
+            set.add(7);
+            set.add(109);
+        }
 }
 
 
