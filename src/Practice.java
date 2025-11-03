@@ -62,12 +62,17 @@ public class Practice {
                 odd++;
             }
         }
-        return (odd-even);
+        if (even > odd) {
+            return (even-odd);
+        }
+        else {
+            return (odd-even);
+        }
     }
 
     public static int secondLargest (ArrayList<Integer> checking) {
-        int returned = 0;
-        int left = 0;
+        int returned = -999;
+        int left = -999;
         for (int i : checking) {
             if (i > returned) {
                 left = returned;

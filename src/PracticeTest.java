@@ -21,9 +21,16 @@ public class PracticeTest {
         // Largest: 9, Smallest: -5, Difference: 9 - -5 = 14
         assertEquals(14, actual);
     }
-    
 
-    // TODO: Make tests for each problem you solve
+    @Test
+    void testSearchNo() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "apple");
+        map.put(2, "banana");
+        map.put(3, "pear");
+        String check = Practice.longestWord('z', map);
+        assertEquals("", check);
+    }
     
     @Test
     void testSearch() {
@@ -53,6 +60,13 @@ public class PracticeTest {
         assertEquals(3, check);
     }
 
+    @Test
+    void testNumSearchEmpty() {
+        HashMap<String, Integer> map = new HashMap<>();
+        int check = Practice.exactLength(1, 10, map);
+        assertEquals(0, check);
+    }
+
         @Test
         void testEO() {
             HashSet<Integer> set = new HashSet<Integer>();
@@ -66,6 +80,18 @@ public class PracticeTest {
             assertEquals(check, 1);
         }
 
+    @Test
+    void testEOAllEven() {
+        HashSet<Integer> set = new HashSet<>();
+        set.add(2);
+        set.add(4);
+        set.add(6);
+        set.add(112);
+        set.add(8);
+        int check = Practice.EOdifference(set);
+        assertEquals(5, check);
+    }
+
         @Test
         void testSecondLargest() {
             ArrayList<Integer> testing = new ArrayList<Integer>();
@@ -78,6 +104,18 @@ public class PracticeTest {
             int checking = Practice.secondLargest(testing);
             assertEquals(106, checking);
         }
+
+
+    @Test
+    void testSecondLargestNegatives() {
+        ArrayList<Integer> testing = new ArrayList<>();
+        testing.add(-10);
+        testing.add(-5);
+        testing.add(-1);
+        testing.add(-7);
+        int checking = Practice.secondLargest(testing);
+        assertEquals(-5, checking);
+    }
 }
 
 
