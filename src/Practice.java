@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.ArrayList;
 
 public class Practice {
     /**
@@ -62,5 +63,17 @@ public class Practice {
             }
         }
         return (odd-even);
+    }
+
+    public static int secondLargest (ArrayList<Integer> checking) {
+        int returned = 0;
+        int left = 0;
+        for (int i : checking) {
+            if (i > returned) {
+                left = returned;
+                returned = i;
+            }
+        }
+        return left;
     }
 }

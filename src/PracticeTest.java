@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
@@ -61,6 +61,22 @@ public class PracticeTest {
             set.add(356);
             set.add(7);
             set.add(109);
+
+            int check = Practice.EOdifference(set);
+            assertEquals(check, 1);
+        }
+
+        @Test
+        void testSecondLargest() {
+            ArrayList<Integer> testing = new ArrayList<Integer>();
+            testing.add(1);
+            testing.add(53);
+            testing.add(106);
+            testing.add(100009);
+            testing.add(2);
+
+            int checking = Practice.secondLargest(testing);
+            assertEquals(106, checking);
         }
 }
 
